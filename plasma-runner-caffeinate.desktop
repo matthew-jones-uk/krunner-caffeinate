@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Caffeinate
+Comment=Caffeinate Runner to keep the screen on
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=planetkde
+X-KDE-PluginInfo-Author=matthew-jones-uk
+X-KDE-PluginInfo-Email=matthewbtjones2000@gmail.com
+X-KDE-PluginInfo-Name=caffeinate
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=uk.matthew-jones.krunner-caffeinate
+X-Plasma-DBusRunner-Path=/krunner

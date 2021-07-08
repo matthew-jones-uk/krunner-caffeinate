@@ -50,7 +50,7 @@ func (r Runner) Match(query string) ([]RemoteMatch, *dbus.Error) {
 				{
 					ID:        "-1",
 					Text:      "Caffeinate until disabled",
-					IconName:  "internet-web-browser",
+					IconName:  "accept_time_event",
 					Type:      200,
 					Relevance: 1,
 				},
@@ -65,7 +65,7 @@ func (r Runner) Match(query string) ([]RemoteMatch, *dbus.Error) {
 			{
 				ID:        strconv.FormatInt(int64(duration), 10),
 				Text:      "Caffeinate for " + querySplit[1], //if we can parse then it's valid
-				IconName:  "internet-web-browser",
+				IconName:  "accept_time_event",
 				Type:      200,
 				Relevance: 1,
 			},

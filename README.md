@@ -26,4 +26,4 @@ The `.desktop` file placed in `~/.local/share/kservices5/krunner/dbusplugins` ad
 
 When this entry is selected `Run` is called where we call `org.freedesktop.PowerManagement.Inhibit` and `org.freedesktop.ScreenSaver.Inhibit` (and then `.UnInhibit` after the given duration).
 
-You can also add the `.service` file to `~/.local/share/dbus-1/services/` so that the application is autostarted, opposed to autostarting.
+You can also add the `.service` file to `~/.local/share/dbus-1/services/` so that it's automatically activated. This requires the binary to be at `/usr/krunner-caffeinate`.

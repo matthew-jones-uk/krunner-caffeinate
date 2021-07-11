@@ -44,17 +44,9 @@ type Runner struct{}
 func (r Runner) Match(query string) ([]RemoteMatch, *dbus.Error) {
 	if strings.HasPrefix(strings.ToLower(query), "caffeinate") || strings.HasPrefix(strings.ToLower(query), "caff") {
 		querySplit := strings.Split(strings.ToLower(query), " ")
-		// if no duration is specified (there's no space) then we assume it's until disabled
+		// do not allow no duration to be specified
 		if len(querySplit) == 1 {
-			return []RemoteMatch{
-				{
-					ID:        "-1",
-					Text:      "Caffeinate until disabled",
-					IconName:  "accept_time_event",
-					Type:      200,
-					Relevance: 1,
-				},
-			}, nil
+			return make([]RemoteMatch, 0), nil
 		}
 		duration, err := time.ParseDuration(querySplit[1])
 		// if the duration cannot be parsed then we dont accept
